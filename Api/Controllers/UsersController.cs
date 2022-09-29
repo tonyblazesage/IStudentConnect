@@ -1,5 +1,6 @@
 using Api.Data;
 using Api.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,7 @@ namespace Api.Controllers
 
 
         //method to get all the users 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
@@ -26,6 +28,7 @@ namespace Api.Controllers
 
 
         //method the get user according the username
+        [Authorize]
         [HttpGet("{id}")]
         public async Task <ActionResult<AppUser>> GetUser(int id)
         {

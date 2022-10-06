@@ -8,10 +8,19 @@ import { HttpClientModule } from  '@angular/common/http';
 import { NavComponent } from './components/nav/nav.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+//ngx imports
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +28,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    //ngx modules
+    BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

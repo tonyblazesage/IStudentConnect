@@ -1,41 +1,44 @@
 
 
-<header class="p-3 text-bg-dark">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center me-lg-4 justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-          <span class="fs-4">IStudent <strong style="color: green;">Connect</strong></span>
+<header class="p-lg-3 text-bg-dark p-sm-2">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center" >
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none justify-content-lg-center">
+        <!--Remember to add animation to logo text-->
+        <span style="font-size: 32px; font-weight: 600;">IStudent <strong
+          style="color: green; font-size: 32px;">Connect</strong></span>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-lg-5 mt-lg-2 justify-content-lg-start" *ngIf="accountService.currentUser$ | async">
+        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+        <li><a href="#" class="nav-link px-2 text-secondary">Students</a></li>
+        <li><a href="#" class="nav-link px-2 text-secondary">Messages</a></li>
+        <li><a href="#" class="nav-link px-2 text-secondary">FAQs</a></li>
+        <li><a href="#" class="nav-link px-2 text-secondary">About</a></li>
+      </ul>
+
+      
+       
+
+      <div class="dropdown text-end" *ngIf="accountService.currentUser$ | async" dropdown>
+        <a class="d-block link-dark text-decoration-none dropdown-toggle"
+          aria-expanded="false" dropdownToggle>
+          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          <span>User</span>
         </a>
-
-        <ul class="nav col-12 col-lg-auto me-lg-auto ms-lg-4 mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-            <li><a href="#" class="nav-link px-2 text-secondary">Students</a></li>
-            <li><a href="#" class="nav-link px-2 text-secondary">Messages</a></li>
-            <li><a href="#" class="nav-link px-2 text-secondary">FAQs</a></li>
-            <li><a href="#" class="nav-link px-2 text-secondary">About</a></li>
-        </ul>
-
-
-        <div class="text-end">
-            <form #loginForm="ngForm" (ngSubmit)="login()" autocapitalize="off" id="loginform"> 
-                <input 
-                    name="username"
-                    [(ngModel)]="model.username"
-                    type="text" 
-                    class="form-control form-control-dark text-bg-dark mr-sm-2" 
-                    placeholder="username">
-                <input
-                    name="password"
-                    [(ngModel)]="model.password" 
-                    type="password" 
-                    class="form-control form-control-dark text-bg-dark mr-sm-2" 
-                    placeholder="password">
-
-            </form>
-          <button type="submit" class="btn btn-outline-success me-2" form="loginform">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+        <div class="dropdown-menu text-small mt-sm-2 mt-lg-3" *dropdownMenu>
+          <a class="dropdown-item text-secondary" >Profile</a>
+  
+          <hr class="dropdown-divider">
+  
+          <a class="dropdown-item text-secondary" (click)="logout()">Sign out</a>
         </div>
+        
       </div>
     </div>
-  </header>
+
+    
+
+    
+  </div>
+</header>

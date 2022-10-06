@@ -1,0 +1,23 @@
+.dropdown-toggle,
+.dropdown-item {
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    color: #ffff;
+}
+
+.dropdown-toggle,
+span {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: None;
+    margin-left: 5px;
+    color: #ffff;
+}
+
+.nav,
+.nav-link {
+    font-size: 16px;
+    font-weight: 400;
+}

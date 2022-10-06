@@ -1,0 +1,11 @@
+@media (min-width: 576px)
+{
+    
+
+}
+
+@media screen and (max-device-width: 47.999em) {
+    .container, .container-sm {
+        max-width: 786px;
+    }
+}

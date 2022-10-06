@@ -1,5 +1,6 @@
-<app-nav></app-nav>
+<app-nav ></app-nav>
 
-<ul style="margin-top: 10px;">
-    <li *ngFor="let user of users">{{user.id}} - {{user.userName}}</li>
-</ul>
+
+<div class="container">
+    <app-home *ngIf="(accountService.currentUser$ | async) === null"></app-home>
+</div>

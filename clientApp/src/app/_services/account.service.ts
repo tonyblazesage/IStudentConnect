@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { UrlSerializer } from '@angular/router';
 import { map, ReplaySubject } from 'rxjs';
 import { User } from '../models/user';
 
@@ -27,11 +28,6 @@ export class AccountService {
     )
   }
 
-  //set a current user to the stored object (user) in local storage
-  setCurrentUser(user: User)
-  {
-    this.currentUserStorage.next(user);
-  }
 
   //method to logout user and remove the user object from the browser local storage
   logout()
@@ -39,4 +35,26 @@ export class AccountService {
     localStorage.removeItem('user');
     this.currentUserStorage.next(null);
   }
+
+  //Register user
+  register(model: any)
+  {
+    return this.http.post(this.baserUrl + 'account/register', model).pipe(
+      map( (user: User) => {
+        if(user){
+          localStorage.setItem('user', JSON.stringify(user));
+          this.currentUserStorage.next(user);
+        }
+      })
+    )
+  }
+  
+
+  //set a current user to the stored object (user) in local storage
+  setCurrentUser(user: User)
+  {
+    this.currentUserStorage.next(user);
+  }
+
+  
 }

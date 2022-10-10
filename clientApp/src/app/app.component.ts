@@ -12,11 +12,11 @@ import { AccountService } from './_services/account.service';
 export class AppComponent implements OnInit {
   users: any;
   title="IStudentConnect App";
-  constructor(private http: HttpClient, public accountService: AccountService){}
+  constructor(public accountService: AccountService){}
 
 
   ngOnInit(){
-    this.getUsers();
+    //this method call sets the current user in the rootmodule hence enabling login persistence
     this.setCurrentUser();
   }
 
@@ -24,13 +24,5 @@ export class AppComponent implements OnInit {
   {
     const user: User = JSON.parse(localStorage.getItem('user'));
     this.accountService.setCurrentUser(user);
-  }
-
-  getUsers()
-  {
-    this.http.get('https://localhost:7001/api/users').subscribe({
-    next: (response) => { this.users = response},
-    error: (error) => { console.log(error)} 
-  })
   }
 }

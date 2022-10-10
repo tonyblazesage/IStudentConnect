@@ -1,7 +1,7 @@
 <div class="container container-sm">
     <div class="text-align-center">
         <form #registerForm="ngForm" (ngSubmit)="register()" autocapitalize="off">
-            <h2 class="text-center text-primary">Sign up</h2>
+            <h2 class="text-center text-success">Sign up</h2>
             <hr>
         
             <div class="form-group">
@@ -9,8 +9,8 @@
                 <input type="password" class="form-control" name="password" [(ngModel)]="model.password" placeholder="Password">
             </div>
         
-            <div class="form-group text-center">
-                <button class="btn btn-success mr-2" type="submit">Register</button>
+            <div class="form-group text-center" style="margin-top: 10px;">
+                <button class="btn btn-success" type="submit" style="margin-right: 10px;">Register</button>
                 <button class="btn btn-danger mr-2" type="button" (click)="cancel()">Cancel</button>
             </div>
         </form>
@@ -19,3 +19,32 @@
     
 </div>
 
+
+<!-- <div class="Registerwrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="register-box text-align-center" >
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+      <form class="Register-form">
+        <mat-card-content>
+          <mat-form-field class="formInput">
+            <input matInput placeholder="Username">
+          </mat-form-field>
+          <mat-form-field class="formInput">
+            <input matInput placeholder="Email">
+          </mat-form-field>
+          <mat-form-field class="formInput">
+            <input matInput placeholder="Password">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Choose a role...</mat-label>
+            <mat-select>
+              <mat-option>
+              </mat-option>
+            </mat-select>
+          </mat-form-field> 
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block">Register</button>
+      </form>
+    </mat-card>
+  </div> -->

@@ -1,44 +1,56 @@
-
-
-<header class="p-lg-3 text-bg-dark p-sm-2">
+<header class="p-lg-3 text-bg-dark p-sm-2 fixed-top">
   <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-center" >
-      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none justify-content-lg-center">
+    <div class="d-flex flex-wrap align-items-center justify-content-center">
+      <a routerLink='/'
+        class="d-flex align-items-center mb-2 mt-sm-2 mb-lg-0 text-white text-decoration-none"
+        *ngIf="(accountService.currentUser$ | async) === null">
         <!--Remember to add animation to logo text-->
         <span style="font-size: 32px; font-weight: 600;">IStudent <strong
-          style="color: green; font-size: 32px;">Connect</strong></span>
+            style="color: green; font-size: 32px;">Connect</strong></span>
+      </a>
+      <a routerLink="/list-students"
+        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none justify-content-lg-center"
+        *ngIf="accountService.currentUser$ | async">
+        <!--Remember to add animation to logo text-->
+        <span style="font-size: 32px; font-weight: 600;">IStudent <strong
+            style="color: green; font-size: 32px;">Connect</strong></span>
       </a>
 
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-lg-5 mt-lg-2 justify-content-lg-start" *ngIf="accountService.currentUser$ | async">
-        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2 text-secondary">Students</a></li>
-        <li><a href="#" class="nav-link px-2 text-secondary">Messages</a></li>
-        <li><a href="#" class="nav-link px-2 text-secondary">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2 text-secondary">About</a></li>
+      <ul
+        class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-lg-5 mt-lg-2 justify-content-lg-start">
+        <ng-container *ngIf="accountService.currentUser$ | async">
+          <li><a routerLink="/list-students" class="nav-link px-2 text-secondary" routerLinkActive="active">Home</a>
+          </li>
+          <li><a routerLink="/students" class="nav-link px-2 text-secondary" routerLinkActive="active">Students</a></li>
+          <li><a routerLink="/messages" class="nav-link px-2 text-secondary" routerLinkActive="active">Messages</a></li>
+          <li><a href="#" class="nav-link px-2 text-secondary" routerLinkActive="active">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-secondary" routerLinkActive="active">About</a></li>
+        </ng-container>
+
       </ul>
 
-      
-       
 
-      <div class="dropdown text-end" *ngIf="accountService.currentUser$ | async" dropdown>
-        <a class="d-block link-dark text-decoration-none dropdown-toggle"
-          aria-expanded="false" dropdownToggle>
+
+
+      <div class="dropdown text-end" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
+        <a class="d-block link-dark text-decoration-none dropdown-toggle" aria-expanded="false" dropdownToggle>
           <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-          <span>User</span>
+          <span>{{user.username | titlecase}}</span>
         </a>
         <div class="dropdown-menu text-small mt-sm-2 mt-lg-3" *dropdownMenu>
-          <a class="dropdown-item text-secondary" >Profile</a>
-  
+          <a class="dropdown-item text-secondary">Profile</a>
+
           <hr class="dropdown-divider">
-  
+
           <a class="dropdown-item text-secondary" (click)="logout()">Sign out</a>
         </div>
-        
+
       </div>
     </div>
 
-    
-
-    
   </div>
 </header>
+
+<div class="container mt-sm-3 mt-lg-4" *ngIf="accountService.currentUser$ | async">
+  <router-outlet></router-outlet>
+</div>

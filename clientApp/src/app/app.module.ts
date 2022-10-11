@@ -20,6 +20,7 @@ import { StudentListComponent } from './components/students/student-list/student
 import { StudentInfoComponent } from './components/students/student-info/student-info.component';
 import { AllStudentListsComponent } from './components/all-student-lists/all-student-lists.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { ErrorsTestingComponent } from 'src/errorhandler/errors-testing/errors-testing.component';
 
 
 
@@ -33,7 +34,8 @@ import { MessagesComponent } from './components/messages/messages.component';
     StudentListComponent,
     StudentInfoComponent,
     AllStudentListsComponent,
-    MessagesComponent
+    MessagesComponent,
+    ErrorsTestingComponent
   ],
   imports: [
     BrowserModule,

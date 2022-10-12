@@ -1,15 +1,15 @@
-<header class="p-lg-3 text-bg-dark p-sm-2 fixed-top">
+<header class="p-lg-3 text-bg-dark p-sm-2">
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center">
       <a routerLink='/'
-        class="d-flex align-items-center mb-2 mt-sm-2 mb-lg-0 text-white text-decoration-none"
+        class="d-flex align-items-center mb-2 mt-sm-2 mb-lg-0 text-white text-decoration-none justify-content-lg-center"
         *ngIf="(accountService.currentUser$ | async) === null">
         <!--Remember to add animation to logo text-->
         <span style="font-size: 32px; font-weight: 600;">IStudent <strong
             style="color: green; font-size: 32px;">Connect</strong></span>
       </a>
       <a routerLink="/list-students"
-        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none justify-content-lg-center"
+        class="d-flex align-items-center mb-2 mt-sm-2 mb-lg-0 text-white text-decoration-none justify-content-lg-center"
         *ngIf="accountService.currentUser$ | async">
         <!--Remember to add animation to logo text-->
         <span style="font-size: 32px; font-weight: 600;">IStudent <strong
@@ -25,7 +25,9 @@
           <li><a routerLink="/messages" class="nav-link px-2 text-secondary" routerLinkActive="active">Messages</a></li>
           <li><a href="#" class="nav-link px-2 text-secondary" routerLinkActive="active">FAQs</a></li>
           <li><a href="#" class="nav-link px-2 text-secondary" routerLinkActive="active">About</a></li>
+          <li><a routerLink="/errors" class="nav-link px-2 text-secondary" routerLinkActive="active">Errros</a></li>
         </ng-container>
+        
 
       </ul>
 

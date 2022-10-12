@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ErrorsTestingComponent } from 'src/errorhandler/errors-testing/errors-testing.component';
+import { NotFoundComponent } from 'src/errorhandler/not-found/not-found.component';
 import { AllStudentListsComponent } from './components/all-student-lists/all-student-lists.component';
 import { HomeComponent } from './components/home/home.component';
 import { MessagesComponent } from './components/messages/messages.component';
@@ -17,7 +19,10 @@ const routes: Routes = [
       {path: 'students/:id', component: StudentInfoComponent},
       {path: 'list-students', component: AllStudentListsComponent},
       {path: 'messages', component: MessagesComponent},
+      {path:'errors', component: ErrorsTestingComponent },
+      {path:'not-found', component: NotFoundComponent },
     ]},
+    
   
   {path: '**', component: HomeComponent, pathMatch: 'full'},
 ];

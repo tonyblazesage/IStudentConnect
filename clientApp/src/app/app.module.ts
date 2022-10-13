@@ -23,6 +23,7 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { ErrorsTestingComponent } from 'src/errorhandler/errors-testing/errors-testing.component';
 import { ErrorInterceptorInterceptor } from './_interceptors/error-interceptor.interceptor';
 import { NotFoundComponent } from 'src/errorhandler/not-found/not-found.component';
+import { ServerErrorComponent } from 'src/errorhandler/server-error/server-error.component';
 
 
 
@@ -38,7 +39,8 @@ import { NotFoundComponent } from 'src/errorhandler/not-found/not-found.componen
     AllStudentListsComponent,
     MessagesComponent,
     ErrorsTestingComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ServerErrorComponent
   ],
   imports: [
     BrowserModule,

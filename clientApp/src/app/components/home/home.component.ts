@@ -44,10 +44,7 @@ export class HomeComponent implements OnInit {
       next: (res) => {
         this.router.navigateByUrl('/students'),
         this.toastr.success("logged in successfully")
-      },
-      error: (error) => { 
-        console.log(error),
-        this.toastr.error(error.error) }
+      }
     })
   }
 

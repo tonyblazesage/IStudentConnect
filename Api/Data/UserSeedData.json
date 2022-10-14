@@ -1,0 +1,152 @@
+[
+    {
+        "UserName": "Stacie",
+        "LastName": "Stacie",
+        "StudentId": "A1580EA",
+        "Degreetype": "BA",
+        "UniversityName": "Durham",
+        "Course": "Data Science",
+        "Firstname": "Stacie",
+        "Gender": "female",
+        "DateOfBirth": "1991-11-20",
+        "Created": "2019-04-21",
+        "LastActive": "2020-06-12",
+        "Startdate": "2020-04-17",
+        "Introduction": "Aute ipsum ipsum commodo cillum ullamco et. Pariatur irure culpa in aute minim mollit eu exercitation magna incididunt. Occaecat occaecat duis occaecat voluptate reprehenderit esse pariatur. Esse excepteur amet sint nulla aute officia fugiat. Pariatur dolor exercitation ullamco ex anim. Fugiat duis occaecat aliqua irure. Aliqua qui minim consectetur nulla laboris quis pariatur consequat ea deserunt aliquip.\r\n",
+        "Skills": "Consequat velit ad culpa exercitation cupidatat dolore sunt officia mollit laborum ipsum sit exercitation. Mollit officia Lorem qui est incididunt ut do esse ullamco deserunt eu. Enim sunt aute dolor veniam reprehenderit qui anim dolor in non proident commodo. Cupidatat occaecat labore occaecat dolor proident.\r\n",
+        "Interests": "In magna fugiat velit consectetur amet ipsum consequat.",
+        "CityOfStudy": "Floris",
+        "CountryOfStudy": "Antigua and Barbuda",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/women/6.jpg",
+                "IsMain": true
+            }
+        ]
+    },
+    {
+        "UserName": "Ruth",
+        "LastName": "Ruth",
+        "StudentId": "A1220EA",
+        "Degreetype": "BE",
+        "UniversityName": "Cambridge",
+        "Course": "International Business and Accounting",
+        "Firstname": "Ruth",
+        "Gender": "female",
+        "DateOfBirth": "1974-01-14",
+        "Created": "2019-09-15",
+        "LastActive": "2020-05-26",
+        "Startdate": "2019-04-20",
+        "Introduction": "Magna cillum ex tempor Lorem fugiat officia nulla amet sint mollit enim. Amet cillum non aliquip culpa reprehenderit sit ullamco quis incididunt ex tempor ut in nisi. Ipsum ea incididunt irure in sunt sint eu reprehenderit enim ea sunt. Id voluptate Lorem deserunt nisi qui qui tempor reprehenderit. Voluptate est ad ex laboris culpa deserunt occaecat consequat occaecat labore. Consectetur velit ex laboris proident ullamco ipsum aliqua eiusmod sint aliqua fugiat. Incididunt in exercitation laboris eiusmod Lorem.\r\n",
+        "Skills": "Nisi enim deserunt commodo eiusmod qui. Anim fugiat aute exercitation consequat nulla commodo cillum eiusmod anim reprehenderit fugiat. Aliquip amet tempor exercitation excepteur nostrud elit est sint consequat. Adipisicing dolore fugiat excepteur reprehenderit cupidatat.\r\n",
+        "Interests": "Veniam incididunt magna excepteur irure excepteur consequat pariatur esse.",
+        "CityOfStudy": "Cressey",
+        "CountryOfStudy": "Saudi Arabia",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/women/26.jpg",
+                "IsMain": true
+            }
+        ]
+    },
+    {
+        "UserName": "Stella",
+        "LastName": "Stella",
+        "StudentId": "A1370EA",
+        "Degreetype": "MSC",
+        "UniversityName": "Warwick",
+        "Course": "Engineering",
+        "Firstname": "Stella",
+        "Gender": "female",
+        "DateOfBirth": "1990-01-11",
+        "Created": "2020-02-15",
+        "LastActive": "2020-06-17",
+        "Startdate": "2019-05-21",
+        "Introduction": "Dolore veniam nisi anim id aliquip nulla anim excepteur anim tempor anim magna sint fugiat. Id ullamco ad adipisicing mollit velit. Amet et ullamco in cupidatat aute sunt id incididunt excepteur eiusmod minim elit sit Lorem.\r\n",
+        "Skills": "Magna do esse voluptate reprehenderit ipsum est in reprehenderit ex ut amet enim. Occaecat cillum velit ad ad deserunt mollit reprehenderit laboris esse Lorem enim. Velit fugiat commodo enim laboris enim laboris deserunt adipisicing laboris sint anim sunt. Tempor irure amet nostrud anim ullamco. Eu pariatur qui proident voluptate laboris officia adipisicing fugiat eu fugiat. Fugiat ut nisi excepteur anim ad ullamco laborum. Ex eiusmod duis ut eiusmod.\r\n",
+        "Interests": "Consectetur commodo tempor exercitation nostrud Lorem anim ad magna elit.",
+        "CityOfStudy": "Dundee",
+        "CountryOfStudy": "India",
+        "Photos": [
+            {
+                "Url": "https://randomuser.me/api/portraits/women/56.jpg",
+                "IsMain": true
+            }
+        ]
+    },
+        {
+          "UserName": "Peter",
+          "LastName": "Peter",
+          "StudentId": "A1515EA",
+          "Degreetype": "BE",
+          "UniversityName": "Cambridge",
+          "Course": "Law",
+          "Firstname": "Peter",
+          "Gender": "male",
+          "DateOfBirth": "1986-02-16",
+          "Created": "2019-05-22",
+          "LastActive": "2020-06-23",
+          "Startdate": "2020-05-12",
+          "Introduction": "Do ea ea ea minim est irure veniam voluptate consectetur ut. Elit duis Lorem magna veniam minim ad. Aliqua sunt dolore in pariatur occaecat. Officia qui tempor irure commodo ad sint qui. Sit fugiat enim ex laboris fugiat enim. Cillum velit ullamco quis dolor aliqua velit in occaecat eiusmod.\r\n",
+          "Skills": "Ea ipsum laborum amet incididunt Lorem sint cillum. Sint esse ut ad elit et sit amet. Enim voluptate sit veniam id nisi cupidatat proident ut mollit magna veniam dolor in mollit. Laborum et id proident non id non. Anim aute quis duis minim enim excepteur id fugiat deserunt elit.\r\n",
+          "Interests": "Labore do proident deserunt consequat consectetur enim Lorem id occaecat ex tempor.",
+          "CityOfStudy": "Dundee",
+          "CountryOfStudy": "Swaziland",
+          "Photos": [
+            {
+              "Url": "https://randomuser.me/api/portraits/men/92.jpg",
+              "IsMain": true
+            }
+          ]
+        },
+        {
+          "UserName": "Jack",
+          "LastName": "Jack",
+          "StudentId": "A1064EA",
+          "Degreetype": "PHD",
+          "UniversityName": "London School of Economics",
+          "Course": "International Business and Accounting",
+          "Firstname": "Jack",
+          "Gender": "male",
+          "DateOfBirth": "1985-06-26",
+          "Created": "2020-01-21",
+          "LastActive": "2020-06-10",
+          "Startdate": "2019-12-22",
+          "Introduction": "Est aliquip exercitation tempor aute sint magna nulla aute elit anim commodo. Dolore reprehenderit laborum deserunt ipsum nisi excepteur pariatur consequat dolore. Dolore aliqua exercitation aliquip officia officia. Adipisicing est ut in minim ut qui Lorem laboris non. Voluptate non nostrud nostrud reprehenderit do id voluptate pariatur elit do. Fugiat nulla amet deserunt irure quis in laboris amet laborum consequat. Mollit elit veniam amet cillum.\r\n",
+          "Skills": "Amet occaecat sunt sunt sint incididunt duis. Id esse elit id mollit eiusmod enim. Irure irure tempor reprehenderit ex.\r\n",
+          "Interests": "Anim non voluptate sit esse.",
+          "CityOfStudy": "Gibbsville",
+          "CountryOfStudy": "Botswana",
+          "Photos": [
+            {
+              "Url": "https://randomuser.me/api/portraits/men/96.jpg",
+              "IsMain": true
+            }
+          ]
+        },
+        {
+          "UserName": "Harry",
+          "LastName": "Harry",
+          "StudentId": "A1975EA",
+          "Degreetype": "MA",
+          "UniversityName": "UCL",
+          "Course": "MBA and MIM",
+          "Firstname": "Harry",
+          "Gender": "male",
+          "DateOfBirth": "1976-06-14",
+          "Created": "2019-06-07",
+          "LastActive": "2020-05-17",
+          "Startdate": "2019-05-18",
+          "Introduction": "Dolor nisi non velit occaecat occaecat labore anim in. Anim duis velit pariatur velit qui voluptate amet laborum eiusmod voluptate nisi ut tempor consequat. Commodo ullamco esse officia cupidatat minim occaecat.\r\n",
+          "Skills": "Cupidatat adipisicing aute magna proident laboris consequat occaecat aute. Ut qui anim eu quis sint Lorem. Nisi pariatur voluptate commodo nostrud consequat cupidatat sint amet excepteur qui consectetur irure sint. Occaecat ex do ea amet duis commodo tempor cupidatat. Commodo irure deserunt reprehenderit pariatur aliqua consequat. Sint aliquip deserunt aute et.\r\n",
+          "Interests": "Esse amet elit velit elit tempor nulla minim ad dolore magna velit ad.",
+          "CityOfStudy": "Tuttle",
+          "CountryOfStudy": "Anguilla",
+          "Photos": [
+            {
+              "Url": "https://randomuser.me/api/portraits/men/67.jpg",
+              "IsMain": true
+            }
+          ]
+        }
+]

@@ -1,26 +1,22 @@
-using Api.Extensions;
-
-namespace Api.Entities
+namespace Api.DTOs
 {
-    public class AppUser
+    public class StudentDto 
     {
         public int Id { get; set; }
 
-        public string UserName { get; set; }
+        public string username { get; set; }
+
+        public string PhotoUrl { get; set; }
 
         public string Firstname { get; set; }
 
         public string LastName { get; set; }
 
-        public byte[] PasswordHash { get; set; }
+        public int Age { get; set; }
 
-        public byte[] PasswordSalt { get; set; }
+        public DateTime Created { get; set; } 
 
-        public DateTime DateOfBirth { get; set; }
-
-        public DateTime Created { get; set; } = DateTime.Now;
-
-        public DateTime LastActive { get; set; } = DateTime.Now;
+        public DateTime LastActive { get; set; }
 
         public string Gender { get; set; }
 
@@ -42,13 +38,8 @@ namespace Api.Entities
 
         public string CityOfStudy { get; set; }
 
-        public ICollection<Photo> Photos { get; set; }
+        public ICollection<PhotoDto> Photos { get; set; }
 
         public string StudentId { get; set; }
-
-        // public int GetAge()
-        // {
-        //     return DateOfBirth.CalculateAge();
-        // }
     }
 }

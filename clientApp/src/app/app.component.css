@@ -1,0 +1,9 @@
+
+.body-wrap
+{
+    
+    background-image: url(/assets/Images/img/nicepic1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+}

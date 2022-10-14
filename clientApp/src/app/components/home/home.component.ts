@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
   login() {
     this.accountService.login(this.model).subscribe({
       next: (res) => {
-        this.router.navigateByUrl('/students'),
+        this.router.navigateByUrl('/list-students'),
         this.toastr.success("logged in successfully")
       }
     })

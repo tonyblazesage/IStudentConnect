@@ -24,6 +24,7 @@ import { ErrorsTestingComponent } from 'src/errorhandler/errors-testing/errors-t
 import { ErrorInterceptorInterceptor } from './_interceptors/error-interceptor.interceptor';
 import { NotFoundComponent } from 'src/errorhandler/not-found/not-found.component';
 import { ServerErrorComponent } from 'src/errorhandler/server-error/server-error.component';
+import { StudentCardComponent } from './components/all-student-lists/student-card/student-card.component';
 
 
 
@@ -40,7 +41,8 @@ import { ServerErrorComponent } from 'src/errorhandler/server-error/server-error
     MessagesComponent,
     ErrorsTestingComponent,
     NotFoundComponent,
-    ServerErrorComponent
+    ServerErrorComponent,
+    StudentCardComponent
   ],
   imports: [
     BrowserModule,

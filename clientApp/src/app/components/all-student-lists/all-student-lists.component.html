@@ -1,1 +1,5 @@
-<p>all-student-lists works!</p>
+<div class="row">
+    <div class="col-2" *ngFor="let student of students">
+        <app-student-card [student]="student"></app-student-card>
+    </div>
+</div>

@@ -16,7 +16,7 @@
 		
 		<p>Please check the URL and ensure that it is correct.</p>
 		
-		<a routerLink="/students"  class="link_404" *ngIf="accountService.currentUser$ | async">Go to Home</a>
+		<a routerLink="/list-students"  class="link_404" *ngIf="accountService.currentUser$ | async">Go to Home</a>
         <a routerLink="/"  class="link_404" *ngIf="(accountService.currentUser$ | async) == null">Go to Home</a>
 	</div>
 		</div>

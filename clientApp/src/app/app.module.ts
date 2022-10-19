@@ -17,7 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { StudentListComponent } from './components/students/student-list/student-list.component';
-import { StudentInfoComponent } from './components/students/student-info/student-info.component';
+import { StudentInfoComponent } from './components/all-student-lists/student-info/student-info.component';
 import { AllStudentListsComponent } from './components/all-student-lists/all-student-lists.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { ErrorsTestingComponent } from 'src/errorhandler/errors-testing/errors-testing.component';
@@ -25,6 +25,7 @@ import { ErrorInterceptorInterceptor } from './_interceptors/error-interceptor.i
 import { NotFoundComponent } from 'src/errorhandler/not-found/not-found.component';
 import { ServerErrorComponent } from 'src/errorhandler/server-error/server-error.component';
 import { StudentCardComponent } from './components/all-student-lists/student-card/student-card.component';
+import { JwTokenInterceptor } from './_interceptors/jw-token.interceptor';
 
 
 
@@ -54,7 +55,8 @@ import { StudentCardComponent } from './components/all-student-lists/student-car
     SharedModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorInterceptor, multi: true }
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorInterceptor, multi: true },
+    {provide: HTTP_INTERCEPTORS, useClass: JwTokenInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

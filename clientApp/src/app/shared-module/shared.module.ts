@@ -43,6 +43,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 //ngx imports
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ToastrModule } from 'ngx-toastr';
+import { TabsModule } from 'ngx-bootstrap/tabs'
 
 
 
@@ -57,11 +58,16 @@ import { ToastrModule } from 'ngx-toastr';
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
+    TabsModule.forRoot(),
 
     //material modules
     MatFormFieldModule,
     MatCardModule,
     MatSelectModule,
+    MatDividerModule,
+
+
+    //fontawesome
     FontAwesomeModule
   ],
   exports: [
@@ -70,7 +76,9 @@ import { ToastrModule } from 'ngx-toastr';
     MatFormFieldModule,
     MatCardModule,
     MatSelectModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatDividerModule,
+    TabsModule,
   ]
 })
 export class SharedModule { }

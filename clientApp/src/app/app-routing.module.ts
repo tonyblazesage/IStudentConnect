@@ -6,7 +6,7 @@ import { ServerErrorComponent } from 'src/errorhandler/server-error/server-error
 import { AllStudentListsComponent } from './components/all-student-lists/all-student-lists.component';
 import { HomeComponent } from './components/home/home.component';
 import { MessagesComponent } from './components/messages/messages.component';
-import { StudentInfoComponent } from './components/students/student-info/student-info.component';
+import { StudentInfoComponent } from './components/all-student-lists/student-info/student-info.component';
 import { StudentListComponent } from './components/students/student-list/student-list.component';
 import { AuthenticateGuard } from './_guards/authenticate.guard';
 
@@ -17,8 +17,8 @@ const routes: Routes = [
     runGuardsAndResolvers: 'always',
     canActivate: [AuthenticateGuard],
     children: [
-      { path: 'students', component: StudentListComponent, canActivate: [AuthenticateGuard] },
-      { path: 'students/:id', component: StudentInfoComponent },
+      { path: 'jobs', component: StudentListComponent},
+      { path: 'list-students/:username', component: StudentInfoComponent },
       { path: 'list-students', component: AllStudentListsComponent },
       { path: 'messages', component: MessagesComponent },
       

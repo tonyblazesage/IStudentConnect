@@ -2,7 +2,7 @@
     <div class="cards">
         <div class="card mb-4 col-lg-12 col-sm-12">
             <div class="card-img-wrapper">
-                <img src="{{student.photoUrl}}" alt="{{student.firstname}}" class="card-img-top img-fluid">
+                <img src="{{student.photoUrl || './assets/images/user.png'}}" alt="{{student.firstname}}" class="card-img-top img-fluid">
                 <ul class="list-inline student-icons animate text-sm-center">
                     <li class="list-inline-item">
                         <a routerLink="/list-students/{{student.username}}"><button style="background: transparent; border: none;"><i class="fa fa-user user-icon"></i></button></a>

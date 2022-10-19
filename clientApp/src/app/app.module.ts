@@ -26,6 +26,7 @@ import { NotFoundComponent } from 'src/errorhandler/not-found/not-found.componen
 import { ServerErrorComponent } from 'src/errorhandler/server-error/server-error.component';
 import { StudentCardComponent } from './components/all-student-lists/student-card/student-card.component';
 import { JwTokenInterceptor } from './_interceptors/jw-token.interceptor';
+import { ProfileEditComponent } from './components/all-student-lists/profile-edit/profile-edit.component';
 
 
 
@@ -43,7 +44,8 @@ import { JwTokenInterceptor } from './_interceptors/jw-token.interceptor';
     ErrorsTestingComponent,
     NotFoundComponent,
     ServerErrorComponent,
-    StudentCardComponent
+    StudentCardComponent,
+    ProfileEditComponent
   ],
   imports: [
     BrowserModule,

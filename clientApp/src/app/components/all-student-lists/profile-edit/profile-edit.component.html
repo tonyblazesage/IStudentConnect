@@ -25,7 +25,8 @@
                                         class="ms-2" style="color: green;">Student ID:</strong> {{student.studentId}}
                                 </p>
                                 <p style="font-size:14px; font-weight: 400; color: #333333;;"><strong class="mt-2" style="color: green;">Course:
-                                    </strong>{{student.degreetype}} in {{student.course}}<strong class="ms-2"
+                                    </strong>{{student.degreetype}} in {{student.course}}</p>
+                                <p><strong class="ms-2"
                                         style="color: green;">University:</strong> {{student.universityName}}</p>
                                 <p style="font-size:14px; font-weight: 400; color: #333333;;"><strong class="mt-2"
                                         style="color: green;">Location</strong> {{student.countryOfStudy}},
@@ -53,81 +54,109 @@
                     <div class="card mb-4">
                         <div class="card-header">Profile Details</div>
                         <div class="card-body">
-                            <div class="alert alert-danger text-center">
+                            <div class="alert alert-info text-center" *ngIf="profileEDitForm.dirty">
                                 <strong>Information: </strong> Any unsaved changes will be lost
                             </div>
-                            <form>
+
+
+
+                            <form #profileEDitForm="ngForm" id="profileEDitForm" (ngsubmit)="updateProfile()">
                                 <!-- Form Group (username)-->
                                 <div class="mb-3">
-                                    <label class="small mb-1" for="username">Username: </label>
-                                    <input class="form-control" id="username" type="text" name="username"
-                                        placeholder="Username">
+                                    <label class="small mb-1" for="username">Username: (ReadOnly) </label>
+                                    <input disabled class="form-control" id="username" type="text" name="username"
+                                        placeholder="{{student.username || titlecase }}">
                                 </div>
                                 <!-- Form Row-->
                                 <div class="row gx-3 mb-3">
                                     <!-- Form Group (first name)-->
                                     <div class="col-md-6">
-                                        <label class="small mb-1" for="firstname">First name</label>
-                                        <input class="form-control" id="firstname" type="text"
+                                        <label class="small mb-1" for="firstname">First name: </label>
+                                        <input [(ngModel)]="student.firstname" class="form-control" id="firstname" type="text"
                                             placeholder="First name" name="firstname">
                                     </div>
                                     <!-- Form Group (last name)-->
                                     <div class="col-md-6">
-                                        <label class="small mb-1" for="lastName">Last name</label>
-                                        <input class="form-control" id="lastName" type="text"
+                                        <label class="small mb-1" for="lastName">Last name: </label>
+                                        <input [(ngModel)]="student.lastName" class="form-control" id="lastName" type="text"
                                             placeholder="Enter your last name" name="lastName">
                                     </div>
+                                </div>
+                                <!-- Form Row-->
+                                <div class="row gx-3 mb-3">
+                                    <!-- Form Group (Gender)-->
+                                    <div class="col-md-6">
+                                        <label class="small mb-1" for="gender">Gender: </label>
+                                        <select id="gender" class="form-control" name="gender" type="text" [(ngModel)]="student.gender">
+                                            <option selected value>-----Choose a gender -----</option>
+                                            <option value="Male"> Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                    <!-- Form Group (Date of birth)-->
+                                    <!-- <div class="col-md-6">
+                                        <label class="small mb-1" for="dateOfBirth">Date of birth: </label>
+                                        <input class="form-control" id="dateOfBirth" type="date"
+                                            placeholder="Enter your date of birth " name="lastName">
+                                    </div> -->
                                 </div>
                                 <!-- Form Row  (course details)      -->
                                 <div class="row gx-3 mb-3">
                                     <!-- Form Group (University name)-->
                                     <div class="col-md-6">
-                                        <label class="small mb-1" for="universityName">University name</label>
-                                        <input class="form-control" id="universityName" type="text"
+                                        <label class="small mb-1" for="universityName">University: </label>
+                                        <input [(ngModel)]="student.universityName" class="form-control" id="universityName" type="text"
                                             placeholder="University name" name="universityName">
                                     </div>
-                                    <!-- Form Group (location)-->
+                                    <!-- Form Group (Course)-->
                                     <div class="col-md-6">
-                                        <label class="small mb-1" for="inputLocation">Location</label>
-                                        <input class="form-control" id="inputLocation" type="text"
-                                            placeholder="Enter your location" value="San Francisco, CA">
+                                        <label class="small mb-1" for="course">Course: </label>
+                                        <input [(ngModel)]="student.course" class="form-control" id="course" type="text"
+                                            placeholder="Course title" name="course" >
                                     </div>
-                                    <!-- Form Group (location)-->
+                                    <!-- Form Group (Degree)-->
                                     <div class="col-md-6 mt-3">
-                                        <label class="small mb-1" for="inputLocation">Location</label>
-                                        <input class="form-control" id="inputLocation" type="text"
-                                            placeholder="Enter your location" value="San Francisco, CA">
+                                        <label class="small mb-1" for="degreetype">Degree type: </label>
+                                        <input [(ngModel)]="student.degreetype" class="form-control" id="degreetype" type="text"
+                                            placeholder="Degree eg. Bsc, Msc etc" name="degreetype">
                                     </div>
                                     <div class="col-md-6 mt-3">
-                                        <label class="small mb-1" for="inputLocation">Location</label>
-                                        <input class="form-control" id="inputLocation" type="text"
-                                            placeholder="Enter your location" value="San Francisco, CA">
+                                        <label class="small mb-1" for="startdate">Course start date: </label>
+                                        <input [(ngModel)]="student.startdate" class="form-control" id="startdate" type="date"
+                                            placeholder="{{student.startdate}}" name="startdate">
                                     </div>
                                 </div>
-                                <!-- Form Group (email address)-->
-                                <div class="mb-3">
-                                    <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                                    <input class="form-control" id="inputEmailAddress" type="email"
-                                        placeholder="Enter your email address" value="name@example.com">
-                                </div>
-                                <!-- Form Row-->
+                                
+                                <!-- Form Row (location)-->
                                 <div class="row gx-3 mb-3">
-                                    <!-- Form Group (phone number)-->
+                                    <!-- Form Group (country of study)-->
                                     <div class="col-md-6">
-                                        <label class="small mb-1" for="inputPhone">Phone number</label>
-                                        <input class="form-control" id="inputPhone" type="tel"
-                                            placeholder="Enter your phone number" value="555-123-4567">
+                                        <label class="small mb-1" for="countryOfStudy">Country of study: </label>
+                                        <input [(ngModel)]="student.countryOfStudy" class="form-control" id="countryOfStudy" type="text"
+                                            placeholder="country" name="countryOfStudy" >
                                     </div>
-                                    <!-- Form Group (birthday)-->
+                                    <!-- Form Group (city)-->
                                     <div class="col-md-6">
-                                        <label class="small mb-1" for="inputBirthday">Birthday</label>
-                                        <input class="form-control" id="inputBirthday" type="text" name="birthday"
-                                            placeholder="Enter your birthday" value="06/10/1988">
+                                        <label class="small mb-1 " for="cityOfStudy">City: </label>
+                                        <input [(ngModel)]="student.cityOfStudy" class="form-control" id="cityOfStudy" type="text" name="cityOfStudy"
+                                            placeholder="city">
                                     </div>
+                                </div>
+
+                                <!-- Form Group (Summary)-->
+                                <div class="mb-3">
+                                    <label class="small mb-1" for="introduction">Summary: </label>
+                                    <textarea [(ngModel)]="student.introduction" class="form-control" name="introduction" id="introduction" rows="3"></textarea>
+                                </div>
+
+                                 <!-- Form Group (skills)-->
+                                <div class="mb-3">
+                                    <label class="small mb-1" for="skills">Skills: </label>
+                                    <textarea [(ngModel)]="student.skills" class="form-control" name="skills" id="skills" rows="3"></textarea>
                                 </div>
                                 <hr>
                                 <!-- Save changes button-->
-                                <button class="btn" type="button" style="background: green; color: #ffff;">Save
+                                <button class="btn btn-success" type="submit" form="profileEDitForm" (click)="updateProfile()" style=" color: #ffff;" [disabled]="!profileEDitForm.dirty">Save
                                     changes</button>
                             </form>
                         </div>
@@ -163,7 +192,7 @@
                                     <input class="form-control" id="confirmPassword" type="password"
                                         placeholder="Confirm new password">
                                 </div>
-                                <button class="btn" type="button" style="background: green; color: #ffff;">Save</button>
+                                <button class="btn btn-success" type="button" style="color: #ffff;">Save</button>
                             </form>
                         </div>
                     </div>
@@ -220,34 +249,15 @@
         <tab heading="Photos">
             <div class="row">
                 <div class="col-lg-8">
-                    <!-- upload photos card-->
-                   
-                       
-                            <ngx-gallery [options]="galleryOptions" [images]="galleryImages" 
-                            style="display: inline-block; margin-bottom: 20px"></ngx-gallery>
-                        
-                    
+                    <!-- Edit photos card-->
+                  <h1>Edit photos</h1>
                 </div>
                 
             </div>
 
         </tab>
 
-        <!--Messages-->
-        <tab heading="Messages">
-            <div class="row">
-                <div class="col-lg-8">
-                    <!-- upload photos card-->
-                    <div class="card mb-4">
-                        <div class="card-header">Messages</div>
-                        <div class="card-body">
-                            
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </tab>
+        
 
     </tabset>
 

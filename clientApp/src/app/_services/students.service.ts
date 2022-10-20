@@ -19,4 +19,9 @@ export class StudentsService {
   getStudent(username: string){
     return this.http.get<Student>(this.baseUrl + 'users/' + username);
   }
+
+  updateProfile(student: Student)
+  {
+    return this.http.put(this.baseUrl + 'users', student);
+  }
 }

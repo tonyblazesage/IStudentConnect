@@ -10,6 +10,7 @@ import { StudentInfoComponent } from './components/all-student-lists/student-inf
 import { StudentListComponent } from './components/students/student-list/student-list.component';
 import { AuthenticateGuard } from './_guards/authenticate.guard';
 import { ProfileEditComponent } from './components/all-student-lists/profile-edit/profile-edit.component';
+import { InterceptPageExitGuard } from './_guards/intercept-page-exit.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,7 +21,7 @@ const routes: Routes = [
     children: [
       { path: 'jobs', component: StudentListComponent},
       { path: 'list-students/:username', component: StudentInfoComponent },
-      { path: 'profile/edit', component: ProfileEditComponent },
+      { path: 'profile/edit', component: ProfileEditComponent, canDeactivate: [InterceptPageExitGuard] },
       { path: 'list-students', component: AllStudentListsComponent },
       { path: 'messages', component: MessagesComponent },
       

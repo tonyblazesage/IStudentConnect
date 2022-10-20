@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Api.Data;
 using Api.DTOs;
 using Api.Entities;
@@ -40,6 +41,24 @@ namespace Api.Controllers
         {
             
           return await _userRepo.GetStudentAsync(username);
+        }
+
+        //method to update Profile details
+        [HttpPut]
+        public async Task<ActionResult> UpdateProfile(ProfileUpdateDto profileUpdateDto)
+        {
+            //this gets the user's username from the token which the Api uses to authenticate 
+            var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var user = await _userRepo.GetUserByUsernameAsync(username);
+
+            //automatically maps the updateDto parameters to the parameters of the user retrieved from the token
+            _mapper.Map(profileUpdateDto, user);
+
+            _userRepo.Update(user);
+
+            if(await _userRepo.SaveAlAsync()) return NoContent();
+
+            return BadRequest("User details could not be updated");
         }
 
 

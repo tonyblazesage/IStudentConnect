@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { timeStamp } from 'console';
+import { Observable } from 'rxjs';
 import { Student } from 'src/app/models/student';
 import { StudentsService } from 'src/app/_services/students.service';
 
@@ -9,18 +10,13 @@ import { StudentsService } from 'src/app/_services/students.service';
   styleUrls: ['./all-student-lists.component.css']
 })
 export class AllStudentListsComponent implements OnInit {
-  students: Student[];
+  students$: Observable<Student[]>;
 
   constructor(private studentService: StudentsService) { }
 
   ngOnInit(): void {
-    this.loadStudents();
+    this.students$ = this.studentService.getStudents();
   }
 
-  loadStudents(){
-    this.studentService.getStudents().subscribe({
-      next: (res) => { this.students = res}
-    })
-  }
 
 }

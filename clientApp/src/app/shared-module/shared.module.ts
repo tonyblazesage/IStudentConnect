@@ -48,6 +48,7 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 
 
+
 @NgModule({
   declarations: [],
   imports: [

@@ -48,12 +48,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  // getUsers() {
-  //   this.http.get('https://localhost:7001/api/users').subscribe({
-  //     next: (response) => { this.users = response },
-  //     error: (error) => { console.log("Please contact administrator" + error) }
-  //   })
-  // }
+  
 
   //method to logout user and remove the user object from the browser local storage
   logout() {

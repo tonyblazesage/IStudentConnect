@@ -8,7 +8,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from  '@angular/common/http';
 import { NavComponent } from './components/nav/nav.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared-module/shared.module';
-
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 
@@ -27,6 +27,7 @@ import { ServerErrorComponent } from 'src/errorhandler/server-error/server-error
 import { StudentCardComponent } from './components/all-student-lists/student-card/student-card.component';
 import { JwTokenInterceptor } from './_interceptors/jw-token.interceptor';
 import { ProfileEditComponent } from './components/all-student-lists/profile-edit/profile-edit.component';
+import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 
 
 
@@ -54,11 +55,13 @@ import { ProfileEditComponent } from './components/all-student-lists/profile-edi
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    NgxSpinnerModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorInterceptor, multi: true },
     {provide: HTTP_INTERCEPTORS, useClass: JwTokenInterceptor, multi: true },
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

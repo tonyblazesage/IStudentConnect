@@ -34,7 +34,7 @@
 
       <div class="dropdown text-end" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
         <a class="d-block link-dark text-decoration-none dropdown-toggle" aria-expanded="false" dropdownToggle>
-          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          <img  src="{{student.photoUrl || './assets/images/user.png'}}" alt="{{student.firstname}}" width="50" height="50" class="rounded-circle ">
           <span>{{user.username | titlecase}}</span>
         </a>
         <div class="dropdown-menu text-small mt-sm-2 mt-lg-3" *dropdownMenu>

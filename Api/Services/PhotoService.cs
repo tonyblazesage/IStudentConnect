@@ -36,7 +36,7 @@ namespace Api.Services
                     File = new FileDescription(file.FileName, stream),
                     //property to transform the image into a rounded image. for square images, check cloudinary .net documentation
                     Transformation = new Transformation().Gravity("face").Height(500).Width(500).Crop("crop").Chain()
-                    .Radius("max").Chain().Width(200).Crop("scalee")
+                    .Radius("max").Chain().Width(200).Crop("scale")
                 };
                 uploadResult = await _cloduinary.UploadAsync(uploadParams);
             }

@@ -49,6 +49,7 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 
 
+
 @NgModule({
   declarations: [],
   imports: [
@@ -70,6 +71,7 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
     MatDividerModule,
 
 
+
     //fontawesome
     FontAwesomeModule
   ],
@@ -82,7 +84,8 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
     FontAwesomeModule,
     MatDividerModule,
     TabsModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+
   ]
 })
 export class SharedModule { }

@@ -30,6 +30,7 @@
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^5.2.1",
     "bootswatch": "^5.2.1",
+    "ng2-file-upload": "^1.4.0",
     "ngx-bootstrap": "^8.0.0",
     "ngx-spinner": "^13.0.0",
     "ngx-toastr": "^14.3.0",

@@ -39,7 +39,7 @@ namespace Api.Controllers
 
 
         //method the get user according the username
-        [HttpGet("{username}")]
+        [HttpGet("{username}", Name = "GetUser")]
         public async Task<ActionResult<StudentDto>> GetUser(string username)
         {
             
@@ -92,7 +92,14 @@ namespace Api.Controllers
             user.Photos.Add(newPhoto);
 
             if(await _userRepo.SaveAlAsync())
-                return _mapper.Map<PhotoDto>(newPhoto);
+            {
+                //return _mapper.Map<PhotoDto>(newPhoto);
+
+                //this returns a 201 success message which will contain a route to the user and the photo object
+                return CreatedAtRoute("GetUser", new {username = user.UserName} , _mapper.Map<PhotoDto>(newPhoto));
+
+            }
+                
 
             return BadRequest("Photo upload failed");
         

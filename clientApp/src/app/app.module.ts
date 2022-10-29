@@ -28,6 +28,8 @@ import { StudentCardComponent } from './components/all-student-lists/student-car
 import { JwTokenInterceptor } from './_interceptors/jw-token.interceptor';
 import { ProfileEditComponent } from './components/all-student-lists/profile-edit/profile-edit.component';
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
+import { EditPhotoComponent } from './components/all-student-lists/edit-photo/edit-photo.component';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 
@@ -46,7 +48,8 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
     NotFoundComponent,
     ServerErrorComponent,
     StudentCardComponent,
-    ProfileEditComponent
+    ProfileEditComponent,
+    EditPhotoComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    FileUploadModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorInterceptor, multi: true },
